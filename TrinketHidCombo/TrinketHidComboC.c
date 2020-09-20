@@ -231,7 +231,7 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 }
 
 // see http://vusb.wikidot.com/driver-api
-usbMsgLen_t usbFunctionWrite(uint8_t * data, uchar len)
+usbMsgLen_t usbFunctionWrite(uint8_t * data, __attribute__((unused)) uchar len)
 {
 	//We take the 2nd byte, which is the data byte
 	led_state = data[1];
